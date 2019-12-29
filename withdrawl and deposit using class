@@ -1,0 +1,17 @@
+class Account():
+    def __init__(self,owner,balance):
+        self.owner=owner
+        self.balance=balance
+    def deposit(self,amount):
+        self.balance = self.balance+amount
+        print("Amount {} is added".format(amount))
+        
+    def withdrawl(self,amount):
+        if (self.balance>0):
+            self.balance = self.balance - amount
+            print("Withdrawl of amount {} done successfully".format(amount))
+        else:
+            print("Balance Unavilable")
+    def __str__(self):
+        return f"Owner: {self.owner} \nBalance: {self.balance}"
+    
